@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./03-fvue.js"></script>
+    <div id="app">
+      <p>{{count}}</p>
+      <p f-text="count"></p>
+      <p f-html="html"></p>
+      <p @click="aa">测试点击事件</p>
+    </div>
+    <script>
+      const app = new Fvue({
+        el: '#app',
+        data: {
+          count: 0,
+          obj: {
+            cc: 1
+          },
+          html: `<div>this<span style='color: red'>哈哈哈</span>forge<div>`
+        },
+        methods: {
+          aa(e) {
+            console.log('cccccc', e)
+          }
+        }
+      })
+      setInterval(() => {
+        app.count++
+      }, 1000)
+    </script>
+  </body>
+</html>
