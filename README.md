@@ -20,19 +20,3 @@
 
 
 
-# vue源码调试
-
-## 搭建调试环境
-
-1. 获取地址 git clone
-2. 安装依赖 npm i
-3. 安装rollup  npm i -g rollup
-4. 修改script => dev脚本: 添加 --sourcemap
-5. 执行dev脚本: npm run dev
-
-## 调试技巧
-
-1. 浏览器调试打开指定文件: ctrl+p
-2. 查看调试栈 call stack
-3. 右击显示更多功能
-
